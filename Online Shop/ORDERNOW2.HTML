@@ -1,0 +1,173 @@
+<html>
+    <head>
+        <title>Welcome to E-commerce</title>
+         <style>
+
+        .box5{
+            border-radius: 18px;
+            background-color: rgb(230, 90, 90);
+            width: 1450px;
+            height: 1100px;
+            align-content: center;
+            margin-left: 25px;
+        }
+            body{
+            background-image: url("blue2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+        
+        .box1{
+            background-color: rgb(0, 0, 0);
+            width: 1520px;
+            height: 100px;
+            margin-left: -10px;
+            margin-top: -10px;
+        }
+        .box3{
+            border-radius: 18px;
+            background-color: rgb(255, 255, 255);
+            width: 1000px;
+            border: 10px solid pink;
+            height: 80px;
+            margin-left: 250px;
+            margin-top: 20px;
+        }
+        .box4{
+            border-radius: 18px;
+            border: 5px solid blue;
+            background-color: rgb(255, 255, 255);
+            width: 300px;
+            height: 40px;
+            margin-left: 600;
+            align-content: center;
+        }
+        
+        .input{
+            width: 250px;
+            margin-right: 20px;
+        }
+        td{
+            padding-right: 40px;
+            margin-top: 20px;
+        
+        }
+        td{
+            padding-right: 10px;
+        }
+        .butones{
+        background-color: rgb(230, 90, 90); 
+        border: 2px solid white;
+        color: white;
+         padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+         font-size: 16px;
+         cursor: pointer;
+         transition-duration: 0.4s;
+        }
+        .butones:hover{
+            background-color: #4CAF50;
+            color:rgb(255, 255, 255) ;
+        }
+        .butones:active {
+        margin-left: 1px 1px 0;
+        box-shadow: -1px -1px 1px #000;
+        outline: 1px solid black;
+        }
+        .numero{
+            width: 100;
+        }
+     
+    </style>
+      <script>
+        function PayNow(){
+            var AS = (document.getElementById("AS").value);
+            var JC = (document.getElementById("JC").value);
+            var LS = (document.getElementById("LS").value);
+            var PWS = (document.getElementById("PWS").value);
+            var SPS = (document.getElementById("SPS").value);
+            var PR = (299);
+            var PRR = (149);
+            var Result = ( "The total cost is ₱" + (AS * PR + JC * PR + LS * PR + PWS * PRR + SPS * PR) + "." + "\n You will now be redirected to Checkout Form.");
+                alert(Result);
+                window.location = "ORDER NOW.html";
+                }
+
+        function Reset(){
+            document.getElementById("AS").value = ''
+            document.getElementById("JC").value = ''
+            document.getElementById("LS").value = ''
+            document.getElementById("PWS").value = ''
+            document.getElementById("SPS").value = ''
+           }
+            
+    </script>
+    </head>
+    <body>
+    <div class="box1">
+         <center>
+        <h1><font color="white"><br>WELCOME TO JC'S STORE</font></h1>
+        </center>
+        </div>
+    <div class="box2">
+        <div class="box3">
+        <center>
+        <h1><a href="HOME2.html"> HOME </a> | <a href="GALLERY.html"> GALLERY </a> | <a href="ORDERNOW2.HTML"> ORDER NOW </a> | <a href="CONTACT US.html"> CONTACT US </a> | <a href="ABOUT US.html"> ABOUT US </a></h1></div></center><br><br>
+            <div class="box4">
+        <center><h1 style="margin-top: 5px;">ORDER NOW</h1></center></div><br>
+           <div class="box5">
+               
+        <table>
+            <tr>
+                <td><br><br><left style="margin-left: 150px;"><img src="awesomeshirt.jpg" width="200px" height="300px"></td></left>
+                <td><br><br><left style="margin-left: 300px;"><img src="Justculture.jpg" width="200px" height="300px"></left></td>
+                <td><br><br><left style="margin-left: 250px;"><img src="love shirt.jpg" width="200px" height="300px"></left></td>
+            </tr>
+            <tr>
+                <td><center style="margin-left: 150px;"><font size="5">₱299</font></center></td>
+                <td><center style="margin-left: 300px;"><font size="5">₱299</font></center></td>
+                <td><center style="margin-left: 250px;"><font size="5">₱299</font></center></td>
+            </tr>
+            <tr>
+                <td><center style="margin-left: 150px;"><h3>Awesome Shirt (AS)</h3></center></td>
+                <td><center style="margin-left: 300px;"><h3>Just Culture Shirt (JC)</h3></center></td>
+                <td><center style="margin-left: 250px;"><h3>Love Shirt (LS)</h3></center></td>
+                
+            </tr>
+            <tr>
+               <td><center style="margin-left: 150px;"><input type="number" min="0" id="AS" class="butones numero"></center></td>
+               <td><center style="margin-left: 300px;"><input type="number" min="0" id="JC" class="butones numero"</center></td>
+               <td><center style="margin-left: 250px;"><input type="number" min="0" id="LS" class="butones numero"></center></td>
+            </tr>
+            <tr>
+                <td><br><br><left style="margin-left: 150px;"><img src="blankshirtwhite.jpg" width="200px" height="300px"></td></left>
+                <td><br><br><left style="margin-left: 300px;"><img src="skeletonpeace.jpg" width="200px" height="300px"></left></td>
+            </tr>
+            <tr>
+                <td><center style="margin-left: 150px;"><font size="5">₱149</font></center></td>
+                <td><center style="margin-left: 300px;"><font size="5">₱299</font></center></td>   
+            </tr>
+            <tr>
+                <td><center style="margin-left: 150px;"><h3>Plain White Shirt (PWS)</h3></center></td>
+                <td><center style="margin-left: 300px;"><h3>Skeleton Peace Shirt (SPS)</h3></center></td>
+            </tr>
+           
+            <tr>
+                <td><center style="margin-left: 150px;"><input type="number" min="0" id="PWS" class="butones numero"></center></td>
+                <td><center style="margin-left: 300px;"><input type="number" min="0" id="SPS" class="butones numero"></center></td>
+            </tr>
+        </table>
+        <center>
+            <br><br><br>
+            ____________________________________________________________________________________________________________________________________________________________________________________
+            <br><br>
+                <button onclick="PayNow()" style="margin-left: 70;" class="butones">Pay Now!</button><button onclick="Reset()" class="butones">Reset</button>
+            </center>
+        
+    </div>
+    </body>
+    
+</html>

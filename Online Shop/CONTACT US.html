@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Welcome to E-commerce</title>
+         <style>
+            body{
+            background-image: url("blue2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+        
+        .box1{
+            background-color: rgb(0, 0, 0);
+            width: 1520px;
+            height: 100px;
+            margin-left: -10px;
+            margin-top: -10px;
+        }
+        .box3{
+            border-radius: 18px;
+            background-color: rgb(255, 255, 255);
+            width: 1000px;
+            border: 10px solid pink;
+            height: 80px;
+            margin-left: 250px;
+            margin-top: 20px;
+        }
+        .box4{
+            border-radius: 18px;
+            border: 5px solid blue;
+            background-color: rgb(255, 255, 255);
+            width: 300px;
+            height: 40px;
+            margin-left: 600;
+            align-content: center;
+        }
+            .box5{
+                border-radius: 18px;
+                background-color: rgb(255, 255, 255);
+                width: 1000px;
+                height: 30px;
+                margin-left: 0;
+                align-content: center;
+
+            }
+        </style>
+        <script>
+            function Sub(){
+                document.write("<center> <h1> Thank you for your feedback! We'll get in touch with you soon. </h1></center>")
+            }
+        </script>
+        </head>
+        <body>
+            <div class="box1">
+                <center>
+                <font color="white"><h1><br>WELCOME TO JC'S STORE</h1></font>
+                </center>
+    
+            </div>
+            <div class="box2">
+                <div class="box3">
+                <center>
+                <h1><a href="HOME2.html"> HOME </a> | <a href="GALLERY.html"> GALLERY </a> | <a href="ORDERNOW2.HTML"> ORDER NOW </a> | <a href="CONTACT US.html"> CONTACT US </a> | <a href="ABOUT US.html"> ABOUT US </a></h1></div></center><br><br>
+            <div class="box4"><center><h1 style="margin-top: 5px;">CONTACT US</h1></center></div><br>
+            <center>
+            <div class="box5"> <h3>If you have any questions, please feel free to fill up this form and we will answer to you ASAP. Thank you for shopping!</h3></div><br>
+            </center>
+            <form>
+                <table border=2 align="center" style="background-color: white;">
+                    <tr><td colspan="4" align="center" style="padding-left: 60px;"><h2><b>Contact Information</b></h2></td></tr>
+                    <tr><td colspan="4" align="center" style="padding-left: 40px;"><h3>Date <input type="date" id="DT"></input></td></tr>
+                    <tr><td><h3>Name </td> <td><input type="text" class="input" id="N"></td>
+                        <td><h3>Contact Number </td> <td><input type="number" class="input" id="CN"></td></tr>
+                    <tr><td><h3>E-mail Address </td> <td><input type="email" class="input" id="EM"></td>
+                        <td><h3>Subject </td> <td><input type="text" class="input" id="SB"></td></tr>
+                    <tr><td colspan="4" align="center"><h3>Inquiry<br><textarea cols="50" rows="5"></textarea></td></tr>
+                    <tr><td colspan="4" align="center"><button onclick="Sub()">Submit</button>&nbsp&nbsp&nbsp<input type="reset"></td></tr>
+                </table>
+                    
+            </form>
+            </div>
+            </body>
+            </html>

@@ -1,0 +1,152 @@
+<html>
+    <head>
+        <title>Welcome to E-commerce</title>
+         <style>
+        body{
+            background-image: url("blue2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .box1{
+            background-color: rgb(0, 0, 0);
+            width: 1520px;
+            height: 100px;
+            margin-left: -10px;
+            margin-top: -10px;
+        }
+        .box3{
+            border-radius: 18px;
+            background-color: rgb(255, 255, 255);
+            width: 1000px;
+            border: 10px solid pink;
+            height: 80px;
+            margin-left: 250px;
+            margin-top: 20px;
+        }
+        .box4{
+            border-radius: 18px;
+            background-color: rgb(255, 255, 255);
+            width: 300px;
+            height: 40px;
+            margin-left: 600;
+
+
+        }
+        .input{
+            width: 250px;
+            margin-right: 20px;
+        }
+        td{
+            padding-right: 40px;
+        
+        }
+        td{
+            padding-right: 10px;
+        }
+        .qt{
+            width: 200px;
+        }
+     
+    </style>
+      <script>
+        function Order(){
+            var DT = (document.getElementById("DT").value); 
+            var N = (document.getElementById("N").value);
+            var AD = (document.getElementById("AD").value);
+            var CN = (document.getElementById("CN").value);
+            var EM = (document.getElementById("EM").value);
+            var IC = (document.getElementById("IC").value);
+            var QT = (document.getElementById("QT").value);
+            var ADT = (document.getElementById("ADT").value);
+            var ATT = (document.getElementById("ATT").value);
+            var NN = (document.getElementById("NN").value);
+            var ADD = (document.getElementById("ADD").value);
+            var CNN = (document.getElementById("CNN").value);
+            var EMM = (document.getElementById("EMM").value);
+            var BLM = (document.getElementById("BLM").value)
+            var checkbox = document.getElementById("ship");
+            var Result = ("<center>" + "<h3>" + "Billing Information" + "<br>" + "Date: " + DT + "<br>" + "Name: " + N + "<br>" + "Address: " + AD + "<br>" + "Contact Number: " + CN + "<br>" + "E-mail Address: " + EM + "<br>" + "Item Code: " + IC + "<br>" + "Quantity: " + QT + "<br>" + "Payment Method: " + BLM + "<br>" +  "Additional Details: " + ADT + "</h3>" + "</center>" + "<br>" + "<br>")
+            var Result2 = ("<center>" + "<h3>" + "Shipping Information" + "<br>" + "Date: " + DT + "<br>" + "Name: " + NN + "<br>" + "Address: " + ADD + "<br>" + "Contact Number: " + CNN + "<br>" + "E-mail Address: " + EMM  + "<br>"  + "<br>" + "Additional Details: " + ATT + "</h3>" + "</center>")
+            document.write("<center><h1> Order placed! Please check your e-mail for your receipt. Thank you for shopping!</h1><br>");
+            if (checkbox.checked == true){
+            document.write(Result)       
+            document.write(Result2);
+        } else {
+            document.write(Result); 
+            }
+            if (checkbox.checked == true){
+                
+            }
+        }   
+            
+     
+        function checks(){
+            var checkbox = document.getElementById("ship")
+            var form = document.getElementById("shipping")
+            if (checkbox.checked == true){
+
+                document.getElementById("shipping").style.display = "block";
+            } else {
+                document.getElementById("shipping").style.display = "none";
+            }
+            if (checkbox.checked == true){
+                document.getElementById("Out").style.display = "none";
+            } else{
+                document.getElementById("Out").style.display = "block";
+            }
+        }
+            
+    </script>
+    </head>
+    <body>
+    <div class="box1">
+        
+        <h1><font color="white"><center><br>WELCOME TO JC'S STORE</center></font></h1>
+        </div>
+
+    </div>
+    <div class="box2">
+        <div class="box3">
+        <center>
+        <h1><a href="HOME2.html"> HOME </a> | <a href="GALLERY.html"> GALLERY </a> | <a href="ORDERNOW2.HTML"> ORDER NOW </a> | <a href="CONTACT US.html"> CONTACT US </a> | <a href="ABOUT US.html"> ABOUT US </a></h1></div></center><br><br><br>
+            <div class="box4">
+        <center><h1>ORDER NOW</h1></center></div><br><br><br>
+       <body>
+        <form>
+            <table border=2 align="center" style="background-color: white;">
+                <tr><td colspan="4" align="center" style="padding-left: 60px;"><h2><b>Billing Information</b></h2></td></tr>
+                <tr><td colspan="4" align="center" style="padding-left: 40px;"><h3>Date <input type="date" id="DT"></input></td></tr>
+                <tr><td><h3>Name* </td> <td><input type="text" class="input" id="N" required></td>
+                    <td><h3>Address* </td> <td><input type="text" class="input" id="AD" required></td></tr>
+                <tr><td><h3>Contact Number* </td> <td><input type="number" class="input" id="CN" required></td>
+                    <td><h3>E-mail Address* </td> <td><input type="email" class="input" id="EM" required></td></tr>
+                <tr><td><h3>Item Code/s*</td><td><input type="text" class="input" id="IC" required></td>
+                    <td><h3>Quantity (in order)* </td><td><input type="text" class="QT" id="QT" required></td></tr>  
+                <tr><td><h3>Billing Method</td><td><select id="BLM">
+                        <option value="None">----</option>
+                        <option value="Cash on Delivery">Cash on Delivery</option>
+                        <option value="Credit Card">Credit Card</option>
+                        <option value="Debit Card">Debit Card</option></select></td>
+                <tr><td colspan="4" align="center"><h3>Additional Details<br><textarea cols="50" rows="5" id="ADT"></textarea></td></tr>
+                  
+                <tr><td colspan="4" align="right"><input type="checkbox" onclick="checks()" id="ship">Check if Shipping Information is not the same as Billing Information</td></tr>
+                <tr><td colspan="4" align="center"><button onclick="Order()" id="Out">Order now!</button>&nbsp&nbsp&nbsp<input type="reset" id="Out"></td></tr>
+            </table>    
+            <br><br>
+        </form>
+        <form>
+            <table border=2 align="center" style="background-color: white; width: 60.5%; display: none" id="shipping">
+                
+                <tr><td colspan="4" align="center" style="padding-left: 60px;"><h2><b>Shipping Information</b></h2></td></tr>
+                <tr><td colspan="4" align="center" style="padding-left: 40px;"><h3>Date <input type="date" id="DT"></input></td></tr>
+                <tr><td><h3>Name* </td> <td><input type="text" class="input" id="NN" required></td>
+                    <td><h3>Address* </td> <td><input type="text" class="input" id="ADD" required></td></tr>
+                <tr><td><h3>Contact Number* </td> <td><input type="number" class="input" id="CNN" required></td>
+                    <td><h3>E-mail Address* </td> <td><input type="email" class="input" id="EMM" required></td></tr>
+                <tr><td colspan="4" align="center"><h3>Additional Details<br><textarea cols="50" rows="5" id="ATT"></textarea></td></tr>
+                <tr><td colspan="4" align="center"><button onclick="Order()">Order now!</button>&nbsp&nbsp&nbsp<input type="reset" id="Outt"></td></tr>
+            </table>
+        </form>
+    </div>
+        </body>
+        </html>
